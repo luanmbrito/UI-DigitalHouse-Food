@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".RegisterActivity">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvTitleRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="14dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        android:textSize="@dimen/twentyseven_sp"
+        android:background="@color/purple_500"
+
+
+        />
+
+    <ImageView
+        android:id="@+id/ivBackArrowRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/twentyseven_dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitleRegister"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="@dimen/fourteen_dp"
+
+        android:src="@drawable/ic_keyboard_left_arrow_button"
+        />
+
+    <TextView
+        android:id="@+id/tvRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/ivBackArrowRegister"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvTitleRegister"
+        android:text="@string/register"
+        android:layout_marginLeft="@dimen/nineteen_dp"
+        android:textSize="@dimen/twentyseven_sp"
+        android:textColor="#FFFFFF"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNameRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleRegister"
+        app:layout_constraintBottom_toTopOf="@id/tilEmailRegister"
+        android:layout_marginTop="@dimen/fiftyfour_dp"
+        android:layout_marginLeft="@dimen/twentyfour_dp"
+        android:layout_marginRight="@dimen/twentyfour_dp"
+        android:hint="@string/name"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieNameRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilEmailRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/tilNameRegister"
+        app:layout_constraintEnd_toEndOf="@+id/tilNameRegister"
+        app:layout_constraintTop_toBottomOf="@+id/tilNameRegister"
+        app:layout_constraintBottom_toTopOf="@id/tilPasswordRegister"
+        app:errorContentDescription="Campo"
+        android:layout_marginTop="15dp"
+        android:hint="@string/mail"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieEmailRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilPasswordRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tilEmailRegister"
+        app:layout_constraintEnd_toEndOf="@id/tilEmailRegister"
+        app:layout_constraintTop_toBottomOf="@id/tilEmailRegister"
+        android:layout_marginTop="15dp"
+        android:hint="@string/password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tiePasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilRepeatPasswordRegister"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/tilEmailRegister"
+        app:layout_constraintEnd_toEndOf="@id/tilEmailRegister"
+        app:layout_constraintTop_toBottomOf="@id/tilPasswordRegister"
+        android:layout_marginTop="15dp"
+        android:hint="@string/confirmar_senha"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tieRepeatPasswordRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btRegister"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/seventy_dp"
+        app:layout_constraintVertical_bias="1"
+        app:layout_constraintStart_toStartOf="@id/tilNameRegister"
+        app:layout_constraintEnd_toEndOf="@id/tilNameRegister"
+        app:layout_constraintTop_toBottomOf="@+id/tilRepeatPasswordRegister"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:backgroundTint="@color/button_primary_color"
+        android:text="@string/register"
+        android:textSize="@dimen/twentyone_sp"
+        android:layout_marginBottom="@dimen/twentyfour_dp"
+
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

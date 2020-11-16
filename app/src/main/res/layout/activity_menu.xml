@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/twohundredfifty_dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_background"
+            />
+         <ImageView
+             android:id="@+id/ivBackArrowMenu"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintStart_toStartOf="parent"
+             app:layout_constraintTop_toTopOf="parent"
+             android:scaleType="centerCrop"
+             android:layout_marginTop="@dimen/eight_dp"
+             android:layout_marginLeft="@dimen/fourteen_dp"
+
+             android:src="@drawable/ic_keyboard_left_arrow_button"
+         />
+
+
+
+        <TextView
+            android:id="@+id/tvPratos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivMenu"
+            android:text="@string/pratos_principais"
+            android:textColor="@color/text_default_color"
+            android:textSize="@dimen/thirtysix_sp"
+            android:layout_marginTop="@dimen/thirtysix_dp"
+            android:layout_marginBottom="@dimen/fifteen_dp"
+            android:layout_marginLeft="@dimen/nineteen_dp"
+
+            />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPratos"
+        tools:listitem="@layout/menu_list_item"
+        tools:orientation="vertical"
+        tools:itemCount="2"
+        tools:spanCount="2"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

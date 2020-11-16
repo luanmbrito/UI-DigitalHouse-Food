@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DigitalHouseFood</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="link">https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_960_720.jpg</string>
+    <string name="digital_house_foods">Digital House Foods</string>
+    <string name="password">Senha</string>
+    <string name="mail">Email</string>
+    <string name="login">Log in</string>
+    <string name="or">OR</string>
+    <string name="register">Register</string>
+    <string name="pratos_principais">Pratos Principais</string>
+    <string name="name">Name</string>
+    <string name="confirmar_senha">Confirmar Senha</string>
+    <string name="fechamento">Fecha às 22:00</string>
+</resources>
